@@ -1,0 +1,411 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F254C03C1BEC42F0003A45DA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F254C03B1BEC42F0003A45DA /* main.m */; };
+		F254C03F1BEC42F0003A45DA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F254C03E1BEC42F0003A45DA /* AppDelegate.m */; };
+		F254C0421BEC42F0003A45DA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F254C0411BEC42F0003A45DA /* ViewController.m */; };
+		F254C0451BEC42F0003A45DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F254C0431BEC42F0003A45DA /* Main.storyboard */; };
+		F254C0471BEC42F0003A45DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F254C0461BEC42F0003A45DA /* Assets.xcassets */; };
+		F254C04A1BEC42F0003A45DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F254C0481BEC42F0003A45DA /* LaunchScreen.storyboard */; };
+		F254C0551BEC4583003A45DA /* AMap.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F254C0521BEC4583003A45DA /* AMap.bundle */; };
+		F254C0561BEC4583003A45DA /* AMapSearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F254C0531BEC4583003A45DA /* AMapSearchKit.framework */; };
+		F254C0571BEC4583003A45DA /* MAMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F254C0541BEC4583003A45DA /* MAMapKit.framework */; };
+		F254C0591BEC4669003A45DA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F254C0581BEC4669003A45DA /* UIKit.framework */; };
+		F254C05B1BEC4675003A45DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F254C05A1BEC4675003A45DA /* Foundation.framework */; };
+		F254C05D1BEC4687003A45DA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F254C05C1BEC4687003A45DA /* CoreGraphics.framework */; };
+		F254C05F1BEC4697003A45DA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F254C05E1BEC4697003A45DA /* QuartzCore.framework */; };
+		F254C0611BEC46A3003A45DA /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F254C0601BEC46A3003A45DA /* OpenGLES.framework */; };
+		F254C0631BEC46AE003A45DA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F254C0621BEC46AE003A45DA /* CoreLocation.framework */; };
+		F254C0651BEC46BD003A45DA /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F254C0641BEC46BD003A45DA /* CoreTelephony.framework */; };
+		F254C0671BEC46C9003A45DA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F254C0661BEC46C9003A45DA /* SystemConfiguration.framework */; };
+		F254C0691BEC46E8003A45DA /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F254C0681BEC46E8003A45DA /* libz.tbd */; };
+		F254C06B1BEC4700003A45DA /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F254C06A1BEC4700003A45DA /* libstdc++.6.0.9.tbd */; };
+		F254C06D1BEC4724003A45DA /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F254C06C1BEC4724003A45DA /* libc++.tbd */; };
+		F254C06F1BEC4731003A45DA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F254C06E1BEC4731003A45DA /* Security.framework */; };
+		F254C0731BEC80DF003A45DA /* MapManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F254C0721BEC80DF003A45DA /* MapManager.m */; };
+		F254C0761BEC9DDA003A45DA /* CorrectLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = F254C0751BEC9DDA003A45DA /* CorrectLocation.m */; };
+		F2A05D151BF5892C001FC726 /* CalculatePolygonArea.m in Sources */ = {isa = PBXBuildFile; fileRef = F2A05D141BF5892C001FC726 /* CalculatePolygonArea.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F254C0371BEC42F0003A45DA /* MapLine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapLine.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F254C03B1BEC42F0003A45DA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F254C03D1BEC42F0003A45DA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F254C03E1BEC42F0003A45DA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F254C0401BEC42F0003A45DA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F254C0411BEC42F0003A45DA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F254C0441BEC42F0003A45DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F254C0461BEC42F0003A45DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F254C0491BEC42F0003A45DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F254C04B1BEC42F0003A45DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F254C0521BEC4583003A45DA /* AMap.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AMap.bundle; sourceTree = "<group>"; };
+		F254C0531BEC4583003A45DA /* AMapSearchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AMapSearchKit.framework; sourceTree = "<group>"; };
+		F254C0541BEC4583003A45DA /* MAMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MAMapKit.framework; sourceTree = "<group>"; };
+		F254C0581BEC4669003A45DA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F254C05A1BEC4675003A45DA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F254C05C1BEC4687003A45DA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F254C05E1BEC4697003A45DA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		F254C0601BEC46A3003A45DA /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		F254C0621BEC46AE003A45DA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		F254C0641BEC46BD003A45DA /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		F254C0661BEC46C9003A45DA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		F254C0681BEC46E8003A45DA /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		F254C06A1BEC4700003A45DA /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
+		F254C06C1BEC4724003A45DA /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		F254C06E1BEC4731003A45DA /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		F254C0711BEC80DF003A45DA /* MapManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapManager.h; sourceTree = "<group>"; };
+		F254C0721BEC80DF003A45DA /* MapManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapManager.m; sourceTree = "<group>"; };
+		F254C0741BEC9DDA003A45DA /* CorrectLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CorrectLocation.h; sourceTree = "<group>"; };
+		F254C0751BEC9DDA003A45DA /* CorrectLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CorrectLocation.m; sourceTree = "<group>"; };
+		F2A05D131BF5892C001FC726 /* CalculatePolygonArea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatePolygonArea.h; sourceTree = "<group>"; };
+		F2A05D141BF5892C001FC726 /* CalculatePolygonArea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatePolygonArea.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F254C0341BEC42F0003A45DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F254C06F1BEC4731003A45DA /* Security.framework in Frameworks */,
+				F254C06D1BEC4724003A45DA /* libc++.tbd in Frameworks */,
+				F254C06B1BEC4700003A45DA /* libstdc++.6.0.9.tbd in Frameworks */,
+				F254C0691BEC46E8003A45DA /* libz.tbd in Frameworks */,
+				F254C0671BEC46C9003A45DA /* SystemConfiguration.framework in Frameworks */,
+				F254C0651BEC46BD003A45DA /* CoreTelephony.framework in Frameworks */,
+				F254C0631BEC46AE003A45DA /* CoreLocation.framework in Frameworks */,
+				F254C0611BEC46A3003A45DA /* OpenGLES.framework in Frameworks */,
+				F254C05F1BEC4697003A45DA /* QuartzCore.framework in Frameworks */,
+				F254C05D1BEC4687003A45DA /* CoreGraphics.framework in Frameworks */,
+				F254C05B1BEC4675003A45DA /* Foundation.framework in Frameworks */,
+				F254C0591BEC4669003A45DA /* UIKit.framework in Frameworks */,
+				F254C0571BEC4583003A45DA /* MAMapKit.framework in Frameworks */,
+				F254C0561BEC4583003A45DA /* AMapSearchKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F254C02E1BEC42F0003A45DA = {
+			isa = PBXGroup;
+			children = (
+				F254C0511BEC4583003A45DA /* GaoDeMap */,
+				F254C0701BEC7CF7003A45DA /* Framework */,
+				F254C0391BEC42F0003A45DA /* MapLine */,
+				F254C0381BEC42F0003A45DA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F254C0381BEC42F0003A45DA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F254C0371BEC42F0003A45DA /* MapLine.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F254C0391BEC42F0003A45DA /* MapLine */ = {
+			isa = PBXGroup;
+			children = (
+				F2A05D131BF5892C001FC726 /* CalculatePolygonArea.h */,
+				F2A05D141BF5892C001FC726 /* CalculatePolygonArea.m */,
+				F254C0741BEC9DDA003A45DA /* CorrectLocation.h */,
+				F254C0751BEC9DDA003A45DA /* CorrectLocation.m */,
+				F254C0711BEC80DF003A45DA /* MapManager.h */,
+				F254C0721BEC80DF003A45DA /* MapManager.m */,
+				F254C03D1BEC42F0003A45DA /* AppDelegate.h */,
+				F254C03E1BEC42F0003A45DA /* AppDelegate.m */,
+				F254C0401BEC42F0003A45DA /* ViewController.h */,
+				F254C0411BEC42F0003A45DA /* ViewController.m */,
+				F254C0431BEC42F0003A45DA /* Main.storyboard */,
+				F254C0461BEC42F0003A45DA /* Assets.xcassets */,
+				F254C0481BEC42F0003A45DA /* LaunchScreen.storyboard */,
+				F254C04B1BEC42F0003A45DA /* Info.plist */,
+				F254C03A1BEC42F0003A45DA /* Supporting Files */,
+			);
+			path = MapLine;
+			sourceTree = "<group>";
+		};
+		F254C03A1BEC42F0003A45DA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F254C03B1BEC42F0003A45DA /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F254C0511BEC4583003A45DA /* GaoDeMap */ = {
+			isa = PBXGroup;
+			children = (
+				F254C0521BEC4583003A45DA /* AMap.bundle */,
+				F254C0531BEC4583003A45DA /* AMapSearchKit.framework */,
+				F254C0541BEC4583003A45DA /* MAMapKit.framework */,
+			);
+			name = GaoDeMap;
+			path = MapLine/GaoDeMap;
+			sourceTree = "<group>";
+		};
+		F254C0701BEC7CF7003A45DA /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				F254C06E1BEC4731003A45DA /* Security.framework */,
+				F254C06C1BEC4724003A45DA /* libc++.tbd */,
+				F254C06A1BEC4700003A45DA /* libstdc++.6.0.9.tbd */,
+				F254C0681BEC46E8003A45DA /* libz.tbd */,
+				F254C0661BEC46C9003A45DA /* SystemConfiguration.framework */,
+				F254C0641BEC46BD003A45DA /* CoreTelephony.framework */,
+				F254C0621BEC46AE003A45DA /* CoreLocation.framework */,
+				F254C0601BEC46A3003A45DA /* OpenGLES.framework */,
+				F254C05E1BEC4697003A45DA /* QuartzCore.framework */,
+				F254C05C1BEC4687003A45DA /* CoreGraphics.framework */,
+				F254C05A1BEC4675003A45DA /* Foundation.framework */,
+				F254C0581BEC4669003A45DA /* UIKit.framework */,
+			);
+			name = Framework;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F254C0361BEC42F0003A45DA /* MapLine */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F254C04E1BEC42F0003A45DA /* Build configuration list for PBXNativeTarget "MapLine" */;
+			buildPhases = (
+				F254C0331BEC42F0003A45DA /* Sources */,
+				F254C0341BEC42F0003A45DA /* Frameworks */,
+				F254C0351BEC42F0003A45DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MapLine;
+			productName = MapLine;
+			productReference = F254C0371BEC42F0003A45DA /* MapLine.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F254C02F1BEC42F0003A45DA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "李仁兵";
+				TargetAttributes = {
+					F254C0361BEC42F0003A45DA = {
+						CreatedOnToolsVersion = 7.1;
+					};
+				};
+			};
+			buildConfigurationList = F254C0321BEC42F0003A45DA /* Build configuration list for PBXProject "MapLine" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F254C02E1BEC42F0003A45DA;
+			productRefGroup = F254C0381BEC42F0003A45DA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F254C0361BEC42F0003A45DA /* MapLine */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F254C0351BEC42F0003A45DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F254C04A1BEC42F0003A45DA /* LaunchScreen.storyboard in Resources */,
+				F254C0471BEC42F0003A45DA /* Assets.xcassets in Resources */,
+				F254C0551BEC4583003A45DA /* AMap.bundle in Resources */,
+				F254C0451BEC42F0003A45DA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F254C0331BEC42F0003A45DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F254C0731BEC80DF003A45DA /* MapManager.m in Sources */,
+				F254C0421BEC42F0003A45DA /* ViewController.m in Sources */,
+				F254C0761BEC9DDA003A45DA /* CorrectLocation.m in Sources */,
+				F254C03F1BEC42F0003A45DA /* AppDelegate.m in Sources */,
+				F2A05D151BF5892C001FC726 /* CalculatePolygonArea.m in Sources */,
+				F254C03C1BEC42F0003A45DA /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F254C0431BEC42F0003A45DA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F254C0441BEC42F0003A45DA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F254C0481BEC42F0003A45DA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F254C0491BEC42F0003A45DA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F254C04C1BEC42F0003A45DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F254C04D1BEC42F0003A45DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F254C04F1BEC42F0003A45DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MapLine/GaoDeMap",
+				);
+				INFOPLIST_FILE = MapLine/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Nxin.com.cn.MapLine;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F254C0501BEC42F0003A45DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MapLine/GaoDeMap",
+				);
+				INFOPLIST_FILE = MapLine/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Nxin.com.cn.MapLine;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F254C0321BEC42F0003A45DA /* Build configuration list for PBXProject "MapLine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F254C04C1BEC42F0003A45DA /* Debug */,
+				F254C04D1BEC42F0003A45DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F254C04E1BEC42F0003A45DA /* Build configuration list for PBXNativeTarget "MapLine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F254C04F1BEC42F0003A45DA /* Debug */,
+				F254C0501BEC42F0003A45DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F254C02F1BEC42F0003A45DA /* Project object */;
+}
