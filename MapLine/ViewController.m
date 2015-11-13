@@ -8,8 +8,7 @@
 
 #import "ViewController.h"
 #import <MAMapKit/MAMapKit.h>
-#import "CalculatePolygonArea.h"
-//#import "LocationOperate.c"
+#import "SphericalUtil.h"
 
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
@@ -146,7 +145,7 @@ long getAssignmentNum()
         [self creatEndLine];
         [_startBtn setTitle:START_LOCATION forState:UIControlStateNormal];
         
-        UIAlertController * alertVC = [UIAlertController alertControllerWithTitle:@"提示" message:[NSString stringWithFormat:@"%lf平方米",[[[CalculatePolygonArea alloc] init] computeArea:_coordinates andCount:_assignmentNum]] preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertController * alertVC = [UIAlertController alertControllerWithTitle:@"提示" message:[NSString stringWithFormat:@"%lf平方米",[[[SphericalUtil alloc] init] computeArea:_coordinates andCount:_assignmentNum]] preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action){
             NSLog(@"取消");
         }];

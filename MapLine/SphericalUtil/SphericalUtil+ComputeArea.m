@@ -1,16 +1,14 @@
 //
-//  CalculatePolygonArea.m
+//  SphericalUtil+ComputeArea.m
 //  MapLine
 //
 //  Created by 李仁兵 on 15/11/13.
 //  Copyright © 2015年 李仁兵. All rights reserved.
 //
 
-#import "CalculatePolygonArea.h"
+#import "SphericalUtil+ComputeArea.h"
 
-#define EARTH_RADIUS 6371009.0f
-
-@implementation CalculatePolygonArea
+@implementation SphericalUtil (ComputeArea)
 
 double toRadians(double angdeg) {
     return angdeg/180.0f * M_PI;

@@ -1,16 +1,13 @@
 //
-//  CalculatePolygonArea.h
+//  SphericalUtil+ComputeArea.h
 //  MapLine
-//
-//  根据经纬度计算多边形面积
 //
 //  Created by 李仁兵 on 15/11/13.
 //  Copyright © 2015年 李仁兵. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import <MAMapKit/MAMapKit.h>
+#import "SphericalUtil.h"
 
-@interface CalculatePolygonArea : NSObject
+@interface SphericalUtil (ComputeArea)
 - (CGFloat)computeArea:(CLLocationCoordinate2D *)coordinate2Ds andCount:(NSInteger)count;
 @end
