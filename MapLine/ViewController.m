@@ -212,6 +212,7 @@ updatingLocation:(BOOL)updatingLocation
         NSLog(@"开始生成MAPolyline");
         //取出当前位置的坐标
         NSLog(@"latitude : %f,longitude: %f",userLocation.coordinate.latitude,userLocation.coordinate.longitude);
+        NSLog(@"海拔高度 = %lf",userLocation.location.altitude);
         if (!isHaveCoordinate2D(userLocation.coordinate)) {
             if (_commonPolyline) {
                 [_gdMapView removeOverlay:_commonPolyline];

@@ -28,9 +28,9 @@
 		F254C06B1BEC4700003A45DA /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F254C06A1BEC4700003A45DA /* libstdc++.6.0.9.tbd */; };
 		F254C06D1BEC4724003A45DA /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F254C06C1BEC4724003A45DA /* libc++.tbd */; };
 		F254C06F1BEC4731003A45DA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F254C06E1BEC4731003A45DA /* Security.framework */; };
-		F254C0731BEC80DF003A45DA /* MapManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F254C0721BEC80DF003A45DA /* MapManager.m */; };
-		F254C0761BEC9DDA003A45DA /* CorrectLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = F254C0751BEC9DDA003A45DA /* CorrectLocation.m */; };
-		F2A05D151BF5892C001FC726 /* CalculatePolygonArea.m in Sources */ = {isa = PBXBuildFile; fileRef = F2A05D141BF5892C001FC726 /* CalculatePolygonArea.m */; };
+		F2A05D251BF5FB32001FC726 /* MapManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F2A05D1C1BF5FB32001FC726 /* MapManager.m */; };
+		F2A05D261BF5FB32001FC726 /* CalculatePolygonArea.m in Sources */ = {isa = PBXBuildFile; fileRef = F2A05D1F1BF5FB32001FC726 /* CalculatePolygonArea.m */; };
+		F2A05D271BF5FB32001FC726 /* CorrectLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = F2A05D221BF5FB32001FC726 /* CorrectLocation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,12 +59,12 @@
 		F254C06A1BEC4700003A45DA /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		F254C06C1BEC4724003A45DA /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		F254C06E1BEC4731003A45DA /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		F254C0711BEC80DF003A45DA /* MapManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapManager.h; sourceTree = "<group>"; };
-		F254C0721BEC80DF003A45DA /* MapManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapManager.m; sourceTree = "<group>"; };
-		F254C0741BEC9DDA003A45DA /* CorrectLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CorrectLocation.h; sourceTree = "<group>"; };
-		F254C0751BEC9DDA003A45DA /* CorrectLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CorrectLocation.m; sourceTree = "<group>"; };
-		F2A05D131BF5892C001FC726 /* CalculatePolygonArea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatePolygonArea.h; sourceTree = "<group>"; };
-		F2A05D141BF5892C001FC726 /* CalculatePolygonArea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatePolygonArea.m; sourceTree = "<group>"; };
+		F2A05D1B1BF5FB32001FC726 /* MapManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapManager.h; sourceTree = "<group>"; };
+		F2A05D1C1BF5FB32001FC726 /* MapManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapManager.m; sourceTree = "<group>"; };
+		F2A05D1E1BF5FB32001FC726 /* CalculatePolygonArea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatePolygonArea.h; sourceTree = "<group>"; };
+		F2A05D1F1BF5FB32001FC726 /* CalculatePolygonArea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatePolygonArea.m; sourceTree = "<group>"; };
+		F2A05D211BF5FB32001FC726 /* CorrectLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CorrectLocation.h; sourceTree = "<group>"; };
+		F2A05D221BF5FB32001FC726 /* CorrectLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CorrectLocation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,12 +113,9 @@
 		F254C0391BEC42F0003A45DA /* MapLine */ = {
 			isa = PBXGroup;
 			children = (
-				F2A05D131BF5892C001FC726 /* CalculatePolygonArea.h */,
-				F2A05D141BF5892C001FC726 /* CalculatePolygonArea.m */,
-				F254C0741BEC9DDA003A45DA /* CorrectLocation.h */,
-				F254C0751BEC9DDA003A45DA /* CorrectLocation.m */,
-				F254C0711BEC80DF003A45DA /* MapManager.h */,
-				F254C0721BEC80DF003A45DA /* MapManager.m */,
+				F2A05D1A1BF5FB32001FC726 /* LocationManager */,
+				F2A05D1D1BF5FB32001FC726 /* SphericalUtil */,
+				F2A05D201BF5FB32001FC726 /* Tools */,
 				F254C03D1BEC42F0003A45DA /* AppDelegate.h */,
 				F254C03E1BEC42F0003A45DA /* AppDelegate.m */,
 				F254C0401BEC42F0003A45DA /* ViewController.h */,
@@ -168,6 +165,33 @@
 				F254C0581BEC4669003A45DA /* UIKit.framework */,
 			);
 			name = Framework;
+			sourceTree = "<group>";
+		};
+		F2A05D1A1BF5FB32001FC726 /* LocationManager */ = {
+			isa = PBXGroup;
+			children = (
+				F2A05D1B1BF5FB32001FC726 /* MapManager.h */,
+				F2A05D1C1BF5FB32001FC726 /* MapManager.m */,
+			);
+			path = LocationManager;
+			sourceTree = "<group>";
+		};
+		F2A05D1D1BF5FB32001FC726 /* SphericalUtil */ = {
+			isa = PBXGroup;
+			children = (
+				F2A05D1E1BF5FB32001FC726 /* CalculatePolygonArea.h */,
+				F2A05D1F1BF5FB32001FC726 /* CalculatePolygonArea.m */,
+			);
+			path = SphericalUtil;
+			sourceTree = "<group>";
+		};
+		F2A05D201BF5FB32001FC726 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				F2A05D211BF5FB32001FC726 /* CorrectLocation.h */,
+				F2A05D221BF5FB32001FC726 /* CorrectLocation.m */,
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,12 +265,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F254C0731BEC80DF003A45DA /* MapManager.m in Sources */,
+				F2A05D251BF5FB32001FC726 /* MapManager.m in Sources */,
 				F254C0421BEC42F0003A45DA /* ViewController.m in Sources */,
-				F254C0761BEC9DDA003A45DA /* CorrectLocation.m in Sources */,
 				F254C03F1BEC42F0003A45DA /* AppDelegate.m in Sources */,
-				F2A05D151BF5892C001FC726 /* CalculatePolygonArea.m in Sources */,
+				F2A05D271BF5FB32001FC726 /* CorrectLocation.m in Sources */,
 				F254C03C1BEC42F0003A45DA /* main.m in Sources */,
+				F2A05D261BF5FB32001FC726 /* CalculatePolygonArea.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
