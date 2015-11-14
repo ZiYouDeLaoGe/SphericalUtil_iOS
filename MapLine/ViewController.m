@@ -94,6 +94,8 @@ long getAssignmentNum()
     
     UIButton * _startBtn;
     BOOL _isLocation;
+    
+    UILabel * _infoLabel;
 }
 @end
 
@@ -119,6 +121,15 @@ long getAssignmentNum()
     [_startBtn setTitle:START_LOCATION forState:UIControlStateNormal];
     _startBtn.frame = CGRectMake(20,100, 150, 40);
     [self.view addSubview:_startBtn];
+    
+    
+    _infoLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, SCREEN_HEIGHT - 120, SCREEN_WIDTH - 40, 100)];
+    _infoLabel.textColor = [UIColor whiteColor];
+    _infoLabel.backgroundColor = [UIColor redColor];
+    _infoLabel.numberOfLines = 0;
+    _infoLabel.textAlignment = NSTextAlignmentCenter;
+    [self.view addSubview:_infoLabel];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -145,16 +156,16 @@ long getAssignmentNum()
         [self creatEndLine];
         [_startBtn setTitle:START_LOCATION forState:UIControlStateNormal];
         
-        UIAlertController * alertVC = [UIAlertController alertControllerWithTitle:@"提示" message:[NSString stringWithFormat:@"%lf平方米",[[[SphericalUtil alloc] init] computeArea:_coordinates andCount:_assignmentNum]] preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action){
-            NSLog(@"取消");
-        }];
-        UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"好的" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
-            NSLog(@"好的");
-        }];
-        [alertVC addAction:cancelAction];
-        [alertVC addAction:okAction];
-        [self presentViewController:alertVC animated:YES completion:nil];
+//        UIAlertController * alertVC = [UIAlertController alertControllerWithTitle:@"提示" message:[NSString stringWithFormat:@"%lf平方米",[[[SphericalUtil alloc] init] computeArea:_coordinates andCount:_assignmentNum]] preferredStyle:UIAlertControllerStyleAlert];
+//        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action){
+//            NSLog(@"取消");
+//        }];
+//        UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"好的" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
+//            NSLog(@"好的");
+//        }];
+//        [alertVC addAction:cancelAction];
+//        [alertVC addAction:okAction];
+//        [self presentViewController:alertVC animated:YES completion:nil];
     }
     
 }
@@ -212,14 +223,19 @@ updatingLocation:(BOOL)updatingLocation
         //取出当前位置的坐标
         NSLog(@"latitude : %f,longitude: %f",userLocation.coordinate.latitude,userLocation.coordinate.longitude);
         NSLog(@"海拔高度 = %lf",userLocation.location.altitude);
-        if (!isHaveCoordinate2D(userLocation.coordinate)) {
-            if (_commonPolyline) {
-                [_gdMapView removeOverlay:_commonPolyline];
-                _commonPolyline = nil;
+        NSLog(@"水平精度 = %lf",userLocation.location.horizontalAccuracy);
+        if(userLocation.location.horizontalAccuracy > 0){
+//            horizontalAccuracy的值越大，那么定义的圆就越大，因此位置精度就越低。如果horizontalAccuracy的值为负，则表明coordinate的值无效。
+            if (!isHaveCoordinate2D(userLocation.coordinate)) {
+                if (_commonPolyline) {
+                    [_gdMapView removeOverlay:_commonPolyline];
+                    _commonPolyline = nil;
+                }
+                _commonPolyline = [MAPolyline polylineWithCoordinates:getCoordinates(userLocation.coordinate) count:_assignmentNum];
+                _infoLabel.text = [NSString stringWithFormat:@"周长 = %lf米\n面积 = %lf平方米\n海拔 = %lf米",[[[SphericalUtil alloc] init] computePerimeter:_coordinates andCount:_assignmentNum],[[[SphericalUtil alloc] init] computeArea:_coordinates andCount:_assignmentNum],userLocation.location.altitude];
+                //在地图上添加折线对象
+                [_gdMapView addOverlay: _commonPolyline];
             }
-            _commonPolyline = [MAPolyline polylineWithCoordinates:getCoordinates(userLocation.coordinate) count:_assignmentNum];
-            //在地图上添加折线对象
-            [_gdMapView addOverlay: _commonPolyline];
         }
         NSLog(@"结束生成MAPolyline");
     }

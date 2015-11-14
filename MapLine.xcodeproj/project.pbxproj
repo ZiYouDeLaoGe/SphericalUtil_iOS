@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F20291A51BF7076A004761FA /* SphericalUtil+ComputePerimeter.m in Sources */ = {isa = PBXBuildFile; fileRef = F20291A41BF7076A004761FA /* SphericalUtil+ComputePerimeter.m */; };
 		F254C03C1BEC42F0003A45DA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F254C03B1BEC42F0003A45DA /* main.m */; };
 		F254C03F1BEC42F0003A45DA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F254C03E1BEC42F0003A45DA /* AppDelegate.m */; };
 		F254C0421BEC42F0003A45DA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F254C0411BEC42F0003A45DA /* ViewController.m */; };
@@ -35,6 +36,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F20291A31BF7076A004761FA /* SphericalUtil+ComputePerimeter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SphericalUtil+ComputePerimeter.h"; sourceTree = "<group>"; };
+		F20291A41BF7076A004761FA /* SphericalUtil+ComputePerimeter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SphericalUtil+ComputePerimeter.m"; sourceTree = "<group>"; };
 		F254C0371BEC42F0003A45DA /* MapLine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapLine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F254C03B1BEC42F0003A45DA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F254C03D1BEC42F0003A45DA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -186,6 +189,8 @@
 				F2A05D2A1BF5FC5D001FC726 /* SphericalUtil.m */,
 				F2A05D2C1BF5FCD4001FC726 /* SphericalUtil+ComputeArea.h */,
 				F2A05D2D1BF5FCD4001FC726 /* SphericalUtil+ComputeArea.m */,
+				F20291A31BF7076A004761FA /* SphericalUtil+ComputePerimeter.h */,
+				F20291A41BF7076A004761FA /* SphericalUtil+ComputePerimeter.m */,
 			);
 			path = SphericalUtil;
 			sourceTree = "<group>";
@@ -272,6 +277,7 @@
 			files = (
 				F2A05D2E1BF5FCD4001FC726 /* SphericalUtil+ComputeArea.m in Sources */,
 				F2A05D251BF5FB32001FC726 /* MapManager.m in Sources */,
+				F20291A51BF7076A004761FA /* SphericalUtil+ComputePerimeter.m in Sources */,
 				F254C0421BEC42F0003A45DA /* ViewController.m in Sources */,
 				F254C03F1BEC42F0003A45DA /* AppDelegate.m in Sources */,
 				F2A05D2B1BF5FC5D001FC726 /* SphericalUtil.m in Sources */,
