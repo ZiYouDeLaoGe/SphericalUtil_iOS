@@ -86,11 +86,11 @@ long getAssignmentNum()
 >
 {
     MAMapView * _gdMapView;
-    MAPolyline * _commonPolyline;
-    MAPolylineView * _polylineView;
+    MAPolygon * _commonPolygon;
+    MAPolygonView * _polygonView;
     
-    MAPolyline * _endpolyline;
-    MAPolylineView * _endPolyLineView;
+//    MAPolyline * _endpolyline;
+//    MAPolylineView * _endPolyLineView;
     
     UIButton * _startBtn;
     BOOL _isLocation;
@@ -153,7 +153,6 @@ long getAssignmentNum()
         freeCoordinates();
         [_startBtn setTitle:STOP_LOCATION forState:UIControlStateNormal];
     }else{
-        [self creatEndLine];
         [_startBtn setTitle:START_LOCATION forState:UIControlStateNormal];
         
 //        UIAlertController * alertVC = [UIAlertController alertControllerWithTitle:@"提示" message:[NSString stringWithFormat:@"%lf平方米",[[[SphericalUtil alloc] init] computeArea:_coordinates andCount:_assignmentNum]] preferredStyle:UIAlertControllerStyleAlert];
@@ -172,45 +171,15 @@ long getAssignmentNum()
 
 - (void)gdMapRemoveLine
 {
-    if (_commonPolyline) {
-        [_gdMapView removeOverlay:_commonPolyline];
-        _commonPolyline = nil;
+    if (_commonPolygon) {
+        [_gdMapView removeOverlay:_commonPolygon];
+        _commonPolygon = nil;
     }
-    if (_polylineView) {
-        [_polylineView removeFromSuperview];
-        _polylineView = nil;
-    }
-    
-    if (_endpolyline) {
-        [_gdMapView removeOverlay:_endpolyline];
-        _endpolyline = nil;
-    }
-    if (_endPolyLineView) {
-        [_endPolyLineView  removeFromSuperview];
-        _endPolyLineView = nil;
-    }
-    
-}
-
-//生成最后两点的线
-- (void)creatEndLine
-{
-    if (!_endLocations) {
-        freeEndLocations();
-    }
-    _endLocations =  malloc(2*sizeof(CLLocationCoordinate2D));
-    if (_assignmentNum > 2) {
-        _endLocations[0] = _coordinates[0];
-        _endLocations[1] = _coordinates[_assignmentNum-1];
-        if (_endpolyline) {
-            [_gdMapView removeOverlay:_endpolyline];
-        }
-        _endpolyline = [MAPolyline polylineWithCoordinates:_endLocations count:2];
-        //在地图上添加折线对象
-        [_gdMapView addOverlay: _endpolyline];
+    if (_polygonView) {
+        [_polygonView removeFromSuperview];
+        _polygonView = nil;
     }
 }
-
 
 #pragma mark - MAMapViewDelegate
 
@@ -227,14 +196,14 @@ updatingLocation:(BOOL)updatingLocation
         if(userLocation.location.horizontalAccuracy > 0){
 //            horizontalAccuracy的值越大，那么定义的圆就越大，因此位置精度就越低。如果horizontalAccuracy的值为负，则表明coordinate的值无效。
             if (!isHaveCoordinate2D(userLocation.coordinate)) {
-                if (_commonPolyline) {
-                    [_gdMapView removeOverlay:_commonPolyline];
-                    _commonPolyline = nil;
+                if (_commonPolygon) {
+                    [_gdMapView removeOverlay:_commonPolygon];
+                    _commonPolygon = nil;
                 }
-                _commonPolyline = [MAPolyline polylineWithCoordinates:getCoordinates(userLocation.coordinate) count:_assignmentNum];
+                _commonPolygon = [MAPolygon polygonWithCoordinates:getCoordinates(userLocation.coordinate) count:_assignmentNum];
                 _infoLabel.text = [NSString stringWithFormat:@"周长 = %lf米\n面积 = %lf平方米\n海拔 = %lf米",[[[SphericalUtil alloc] init] computePerimeter:_coordinates andCount:_assignmentNum],[[[SphericalUtil alloc] init] computeArea:_coordinates andCount:_assignmentNum],userLocation.location.altitude];
                 //在地图上添加折线对象
-                [_gdMapView addOverlay: _commonPolyline];
+                [_gdMapView addOverlay: _commonPolygon];
             }
         }
         NSLog(@"结束生成MAPolyline");
@@ -243,28 +212,21 @@ updatingLocation:(BOOL)updatingLocation
 
 - (MAOverlayView *)mapView:(MAMapView *)mapView viewForOverlay:(id <MAOverlay>)overlay
 {
-    if (overlay == _commonPolyline && _isLocation)
+    if (overlay == _commonPolygon && _isLocation)
     {
         NSLog(@"开始生成MAOverlayView");
-        if (_polylineView) {
-            [_polylineView removeFromSuperview];
-            _polylineView = nil;
+        if (_polygonView) {
+            [_polygonView removeFromSuperview];
+            _polygonView = nil;
         }
-        _polylineView = [[MAPolylineView alloc] initWithPolyline:overlay];
-        _polylineView.lineWidth = 5.f;
-        _polylineView.strokeColor = [UIColor colorWithRed:0 green:0 blue:1 alpha:0.6];
-        _polylineView.lineJoin = kCGLineJoinBevel;//连接类型
-        _polylineView.lineCap = kCGLineCapRound;//端点类型
+        _polygonView = [[MAPolygonView alloc] initWithPolygon:overlay];
+        _polygonView.lineWidth = 1.f;
+        _polygonView.strokeColor = [UIColor colorWithRed:78/255.0f green:187/255.0f blue:15/255.0f alpha:1.0];
+        _polygonView.fillColor = [UIColor colorWithRed:255/255.0f green:114/255.0f blue:0/255.0f alpha:0.5];
+        _polygonView.lineJoin = kCGLineJoinBevel;//连接类型
+        _polygonView.lineCap = kCGLineCapRound;//端点类型
         NSLog(@"结束生成MAOverlayView");
-        return _polylineView;
-    }
-    if (overlay == _endpolyline && !_isLocation) {
-        _endPolyLineView = [[MAPolylineView alloc] initWithPolyline:overlay];
-        _endPolyLineView.lineWidth = 5.f;
-        _endPolyLineView.strokeColor = [UIColor colorWithRed:0 green:0 blue:1 alpha:0.6];
-        _endPolyLineView.lineJoin = kCGLineJoinBevel;//连接类型
-        _endPolyLineView.lineCap = kCGLineCapRound;//端点类型
-        return _endPolyLineView;
+        return _polygonView;
     }
     return nil;
 }
