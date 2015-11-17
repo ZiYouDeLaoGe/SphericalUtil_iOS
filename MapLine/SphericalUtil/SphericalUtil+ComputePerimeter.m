@@ -20,6 +20,7 @@
         CLLocationCoordinate2D end = coordinate2Ds[i+1];
         perimeter += [self getDistance:start andEnd:end];
     }
+    perimeter += [self getDistance:coordinate2Ds[0] andEnd:coordinate2Ds[count-1]];
     return perimeter;
 }
 @end

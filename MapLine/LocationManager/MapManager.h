@@ -12,7 +12,7 @@
 @protocol MapManagerDelegate <NSObject>
 - (void)alertToUserOpenLocationFunc;//提醒用户开启定位功能
 - (void)faildGetLongitudeAndLatitude;
-- (void)succeedSendLocationCoordinate2D:(CLLocationCoordinate2D)coordinate2D;
+- (void)succeedSendLocationCoordinate2D:(CLLocationCoordinate2D)coordinate2D andCLLocation:(CLLocation *)location;
 @end
 
 @interface MapManager : NSObject

@@ -79,10 +79,10 @@
 //    NSLog(@"旧的经度：%f,旧的纬度：%f",newLocation.coordinate.longitude,newLocation.coordinate.latitude);
     //地理位置偏移转换
     newLocation = [CorrectLocation transformToMars:newLocation];
-    CLLocationCoordinate2D newCoordinate = newLocation.coordinate;
+    CLLocationCoordinate2D coordinate2D = newLocation.coordinate;
 //    NSLog(@"转换后的经度：%f,转换后的纬度：%f",newCoordinate.longitude,newCoordinate.latitude);
-    if (_delegate && [_delegate respondsToSelector:@selector(succeedSendLocationCoordinate2D:)]) {
-        [_delegate succeedSendLocationCoordinate2D:newCoordinate];
+    if (_delegate && [_delegate respondsToSelector:@selector(succeedSendLocationCoordinate2D:andCLLocation:)]) {
+        [_delegate succeedSendLocationCoordinate2D:coordinate2D andCLLocation:locations[0]];
     }
 }
 
