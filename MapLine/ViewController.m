@@ -16,7 +16,7 @@
 #define START_LOCATION @"开始测量"
 #define STOP_LOCATION @"停止测量"
 
-#define DEFAULT_MALLOC_NUM 1
+#define DEFAULT_MALLOC_NUM 100
 
 CLLocationCoordinate2D * _coordinates = NULL;
 CLLocationCoordinate2D * _endLocations = NULL;
@@ -51,7 +51,7 @@ CLLocationCoordinate2D * getCoordinates(CLLocationCoordinate2D coordinate2D)
     if (!_coordinates) {
         _coordinates = malloc(DEFAULT_MALLOC_NUM*sizeof(CLLocationCoordinate2D));
     }
-    if ((_assignmentNum+1) == (_distributionNum + 1)*DEFAULT_MALLOC_NUM) {
+    if (_assignmentNum == (_distributionNum + 1)*DEFAULT_MALLOC_NUM) {
         CLLocationCoordinate2D * tempCoorinates = _coordinates;
         _coordinates = realloc(tempCoorinates,DEFAULT_MALLOC_NUM*sizeof(CLLocationCoordinate2D));
         tempCoorinates = NULL;
